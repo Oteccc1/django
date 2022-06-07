@@ -1,0 +1,33 @@
+{%include  'delote/includes/header.html'%}
+<div class="inline_content">
+    <div class="uslugi">
+        {% for master in masters %}
+            <div class="usl_block">
+                <img class="uslugi_img master" src="/media/{{ master.image }}">
+                <p>{{ master.name }}</p>
+                <h4>{{ master.short_desc }}</h4>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{%include  'delote/includes/footer.html'%}
+<style>
+    .uslugi{
+        padding-top: 50px;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .usl_block:before{
+        width: 280px;
+        height: 300px;
+    }
+    .uslugi_img{
+        width: 260px
+    }
+    h4{
+        margin-top: -15%;
+        color:white;
+        font-weight: 100;
+    }
+</style>

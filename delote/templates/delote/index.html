@@ -1,0 +1,76 @@
+{%include  'delote/includes/header.html'%}
+<div class="main_page inline_content">
+    <img class="main_page-img" src="static/img/bgc.png">
+    <h1 class="text_salon">Салон красоты<br>
+        «Delote-Beauty» <br>
+        на Крестовском</h1>
+    <div class="arrow-down" onclick="window.scrollTo({top: 772,behavior: 'smooth',});">
+        <span class="mark_down"></span>
+    </div>
+</div>
+<div class="inline_content">
+    <div class="cov">
+        <img class="cov_img" src="static/img/cov.svg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu nibh vitae amet.<br>
+            Ipsum, pharetra donec ornare velit. Id at quisque accumsan risus ac ipsum ut. Sit<br>
+            elit, facilisi proin non malesuada sociis tristique. Viverra augue lorem ut quisque<br>
+            quam tortor, malesuada iaculis.<br>
+            Et elementum at nulla venenatis, faucibus integer. Auctor neque eros, viverra<br>
+            rutrum. Fames ultrices condimentum tortor nec penatibus. Velit imperdiet
+            <br>sapien fringilla vestibulum sit fames.</p>
+    </div>
+    <div class="uslugi">
+        {% for block in blocks %}
+        <div class="usl_block">
+            <img class="uslugi_img" src="/media/{{ block.image }}">
+            <p>{{block.name}}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="brands_imgs">
+        <img class="brand_img" src="static/img/image%203%20(Traced).svg">
+        <img class="brand_img" src="static/img/image%204%20(Traced).svg">
+        <img class="brand_img" src="static/img/image%205%20(Traced).svg">
+        <img class="brand_img" src="static/img/image%206%20(Traced).svg">
+
+    </div>
+</div>
+<div class="inline_content">
+    <h1 class="our_works">Наши работы</h1>
+    <div class="uslugi_btns">
+        <a class="btn_usl">Показать все</a>
+        <a class="btn_usl">Парикмахерские услуги</a>
+        <a class="btn_usl">Маникюр</a>
+        <a class="btn_usl">Педикюр</a>
+    </div>
+    <div class="uslugi">
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-1.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-2.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-3.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-4.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-5.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-6.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-7.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-8.svg">
+        </div>
+        <div class="usl_block1">
+            <img class="uslugi_img second" src="static/img/work-9.svg">
+        </div>
+    </div>
+</div>
+{%include  'delote/includes/footer.html'%}

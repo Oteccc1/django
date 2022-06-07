@@ -1,0 +1,39 @@
+{%include  'delote/includes/header.html'%}
+
+<div class=inline_content">
+    <h1 class="text_salon">Цены на услуги</h1>
+    {% for usluga in uslugi %}
+    <div class="usluga">
+            <img class="usluga_img" src="/media/{{ usluga.image }}">
+            <div style="display: flex; flex-direction: column; margin-right: 40px;">
+                    <div class="text_uslugi" >
+                        <div style="display: flex">
+                            <div>
+                                <h1>{{ usluga.name }}</h1>
+                                <p>{{ usluga.short_desc }}</p>
+                                <p>{{ usluga.dop }}</p>
+                            </div>
+                            <div>
+                                <h3 class="price">1 000 ₽ </h3>
+                            </div>
+                        </div>
+                        <hr class="usluga_line">
+                    </div>
+            </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+{%include  'delote/includes/footer.html'%}
+<style>
+    .text_salon {
+        font-size: 30px;
+        top: 20px;
+        font-weight: 300;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+</style>

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static '/style.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header">
+        <a class="nav_item" style="margin-left: 0px;"><img class="img_inst" src="/static/img/inst.png"></a>
+        <a class="nav_item" href="/">Главная</a>
+        <a class="nav_item" href="{% url 'masters' %}">Мастера</a>
+        <a class="nav_item" href="/"><img class="img_main" src="/static/img/Vector.svg"></a>
+        <a class="nav_item" href="{% url 'uslugi' %}">Услуги</a>
+        <a class="nav_item" href="{% url 'location' %}">Местоположение</a>
+        <a class="nav_item menu" id="menu"><hr class="head_line"><hr class="head_line1"><hr class="head_line2"></a>
+
+    </div>
+    <div class="sidebar">
+        <div class="sidebar_text">
+            <div class="map__close cross-btn" id="map-close" title="Закрыть карту" role="button">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, adipiscing amet in egestas sem dui,
+                arcu<br>
+                faucibus scelerisque. Nisl est felis id volutpat. Sed dolor fermentum amet lectus nibh quis.
+                Tortor<br>
+                donec pellentesque leo ac placerat. Morbi.</p>
+            <h2>Контакты</h2>
+            <p>898842343</p>
+            <p>898842343</p>
+            <p>Новоостровский проспект, дом 36 лит. С</p>
+            <br>
+            <h2>Режим работы</h2>
+            <p>C 10:00 до 21:00 (Пн-Пт)</p>
+            <p>С 11:00 до 20:00 (Сб-Вс)</p>
+        </div>
+    </div>
+    <script>
+
+        $(".menu").on('click', function () {
+            $('.sidebar').css({
+                'right': '0%',
+            });
+        });
+        $(".map__close").on('click', function () {
+            $('.sidebar').css({
+                'right': '-40%',
+            });
+        });
+    </script>
+    <hr class="line">
+</header>
